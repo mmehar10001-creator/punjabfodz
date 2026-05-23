@@ -7,6 +7,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import appCss from "../styles.css?url";
 
@@ -73,14 +74,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Punjab Foods — Pulao & Kabab, Rawalpindi" },
-      { name: "description", content: "Authentic Pulao, Roast, Kabab and catering Degs from Punjab Foods, Rawalpindi." },
+      {
+        name: "description",
+        content: "Authentic Pulao, Roast, Kabab and catering Degs from Punjab Foods, Rawalpindi.",
+      },
       { name: "author", content: "Punjab Foods" },
       { property: "og:title", content: "Punjab Foods — Pulao & Kabab, Rawalpindi" },
-      { property: "og:description", content: "Authentic Pulao, Roast, Kabab and catering Degs from Punjab Foods, Rawalpindi." },
+      {
+        property: "og:description",
+        content: "Authentic Pulao, Roast, Kabab and catering Degs from Punjab Foods, Rawalpindi.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Punjab Foods — Pulao & Kabab, Rawalpindi" },
-      { name: "twitter:description", content: "Authentic Pulao, Roast, Kabab and catering Degs from Punjab Foods, Rawalpindi." },
+      {
+        name: "twitter:description",
+        content: "Authentic Pulao, Roast, Kabab and catering Degs from Punjab Foods, Rawalpindi.",
+      },
     ],
     links: [
       {
@@ -104,6 +114,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
       <body>
         {children}
         <Scripts />
+        <SpeedInsights />
       </body>
     </html>
   );

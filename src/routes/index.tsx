@@ -10,9 +10,16 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Punjab Foods — Authentic Pulao & Kabab, Rawalpindi" },
-      { name: "description", content: "Punjab Foods serves authentic Chicken Pulao, Roast, Kabab and full catering Deg menu in Rawalpindi. Home delivery available." },
+      {
+        name: "description",
+        content:
+          "Punjab Foods serves authentic Chicken Pulao, Roast, Kabab and full catering Deg menu in Rawalpindi. Home delivery available.",
+      },
       { property: "og:title", content: "Punjab Foods — Pulao & Kabab" },
-      { property: "og:description", content: "Authentic Pulao, Roast & Kabab in Rawalpindi. Order or book catering Degs." },
+      {
+        property: "og:description",
+        content: "Authentic Pulao, Roast & Kabab in Rawalpindi. Order or book catering Degs.",
+      },
     ],
   }),
   component: Index,
@@ -29,10 +36,18 @@ function Index() {
     <SiteLayout>
       {/* Hero */}
       <section className="relative h-screen min-h-[640px] w-full overflow-hidden">
-        <img src={hero} alt="Chicken Pulao" width={1920} height={1080} className="absolute inset-0 h-full w-full object-cover" />
+        <img
+          src={hero}
+          alt="Chicken Pulao"
+          width={1920}
+          height={1080}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-6">
-          <p className="text-xs tracking-[0.4em] uppercase text-primary mb-6">Rawalpindi · Since Years</p>
+          <p className="text-xs tracking-[0.4em] uppercase text-primary mb-6">
+            Rawalpindi · Since Years
+          </p>
           <h1 className="font-serif text-6xl md:text-8xl text-foreground max-w-4xl leading-[1.05]">
             Punjab Foods
           </h1>
@@ -40,10 +55,16 @@ function Index() {
             Pulao · Kabab · Roast · Deg
           </p>
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
-            <Link to="/menu" className="text-xs tracking-[0.25em] uppercase border border-primary px-8 py-4 text-primary hover:bg-primary hover:text-primary-foreground transition-all">
+            <Link
+              to="/menu"
+              className="text-xs tracking-[0.25em] uppercase border border-primary px-8 py-4 text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+            >
               View Menu
             </Link>
-            <Link to="/catering" className="text-xs tracking-[0.25em] uppercase bg-primary text-primary-foreground px-8 py-4 hover:bg-primary/90 transition-all">
+            <Link
+              to="/catering"
+              className="text-xs tracking-[0.25em] uppercase bg-primary text-primary-foreground px-8 py-4 hover:bg-primary/90 transition-all"
+            >
               Book Catering
             </Link>
           </div>
@@ -56,9 +77,9 @@ function Index() {
           <p className="text-xs tracking-[0.4em] uppercase text-primary mb-6">Our Story</p>
           <h2 className="font-serif text-4xl md:text-5xl mb-8">A taste of Punjab on every plate</h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            From the slow-cooked aroma of our signature Chicken Pulao to the smoky char of fresh Shami Kabab,
-            every dish at Punjab Foods is prepared with traditional recipes, hand-picked spices, and the same
-            care we'd serve our own family.
+            From the slow-cooked aroma of our signature Chicken Pulao to the smoky char of fresh
+            Shami Kabab, every dish at Punjab Foods is prepared with traditional recipes,
+            hand-picked spices, and the same care we'd serve our own family.
           </p>
         </div>
       </section>
@@ -71,7 +92,10 @@ function Index() {
               <p className="text-xs tracking-[0.4em] uppercase text-primary mb-3">Signature</p>
               <h2 className="font-serif text-4xl md:text-5xl">House Favourites</h2>
             </div>
-            <Link to="/menu" className="text-xs tracking-[0.25em] uppercase text-primary border-b border-primary pb-1">
+            <Link
+              to="/menu"
+              className="text-xs tracking-[0.25em] uppercase text-primary border-b border-primary pb-1"
+            >
               Full Menu →
             </Link>
           </div>
@@ -79,7 +103,12 @@ function Index() {
             {featured.map((f) => (
               <div key={f.name} className="group">
                 <div className="aspect-square overflow-hidden bg-secondary">
-                  <img src={f.img} alt={f.name} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img
+                    src={f.img}
+                    alt={f.name}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
                 </div>
                 <h3 className="font-serif text-xl mt-4">{f.name}</h3>
                 <p className="text-sm text-primary mt-1">{f.price}</p>
@@ -109,7 +138,10 @@ function Index() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link to="/menu" className="text-xs tracking-[0.25em] uppercase border border-primary px-8 py-4 text-primary hover:bg-primary hover:text-primary-foreground transition-all inline-block">
+            <Link
+              to="/menu"
+              className="text-xs tracking-[0.25em] uppercase border border-primary px-8 py-4 text-primary hover:bg-primary hover:text-primary-foreground transition-all inline-block"
+            >
               See Full Menu
             </Link>
           </div>
@@ -118,15 +150,26 @@ function Index() {
 
       {/* Catering CTA */}
       <section className="relative py-32 px-6 overflow-hidden">
-        <img src={roast} alt="" className="absolute inset-0 h-full w-full object-cover opacity-25" loading="lazy" />
+        <img
+          src={roast}
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover opacity-25"
+          loading="lazy"
+        />
         <div className="absolute inset-0 bg-background/70" />
         <div className="relative z-10 mx-auto max-w-3xl text-center">
-          <p className="text-xs tracking-[0.4em] uppercase text-primary mb-6">Weddings · Events · Functions</p>
+          <p className="text-xs tracking-[0.4em] uppercase text-primary mb-6">
+            Weddings · Events · Functions
+          </p>
           <h2 className="font-serif text-4xl md:text-6xl mb-6">Catering Deg Service</h2>
           <p className="text-muted-foreground text-lg mb-10">
-            From a 10 kg Sada Pulao Deg to a 12 kg Mutton Qorma — we cater shadi, gham, and every occasion with a single phone call.
+            From a 10 kg Sada Pulao Deg to a 12 kg Mutton Qorma — we cater shadi, gham, and every
+            occasion with a single phone call.
           </p>
-          <Link to="/catering" className="text-xs tracking-[0.25em] uppercase bg-primary text-primary-foreground px-8 py-4 hover:bg-primary/90 transition-all inline-block">
+          <Link
+            to="/catering"
+            className="text-xs tracking-[0.25em] uppercase bg-primary text-primary-foreground px-8 py-4 hover:bg-primary/90 transition-all inline-block"
+          >
             View Deg Menu
           </Link>
         </div>
