@@ -6,7 +6,11 @@ export const Route = createFileRoute("/menu")({
   head: () => ({
     meta: [
       { title: "Menu — Punjab Foods" },
-      { name: "description", content: "Full menu: Chicken Pulao, Channa Pulao, Chicken Roast, Shami Kabab, Zarda and more. Prices in PKR." },
+      {
+        name: "description",
+        content:
+          "Full menu: Chicken Pulao, Channa Pulao, Chicken Roast, Shami Kabab, Zarda and more. Prices in PKR.",
+      },
       { property: "og:title", content: "Menu — Punjab Foods" },
       { property: "og:description", content: "Pulao, Roast, Kabab, Zarda — complete price list." },
     ],
@@ -41,7 +45,9 @@ function MenuPage() {
                   <div key={i} className="flex items-baseline gap-4 border-b border-border/60 pb-4">
                     <div>
                       <h3 className="font-serif text-xl">{it.name}</h3>
-                      {it.desc && <p className="text-sm text-muted-foreground italic mt-0.5">{it.desc}</p>}
+                      {it.desc && (
+                        <p className="text-sm text-muted-foreground italic mt-0.5">{it.desc}</p>
+                      )}
                     </div>
                     <div className="flex-1 border-b border-dotted border-border/60 mb-2" />
                     <p className="text-primary font-medium whitespace-nowrap">{it.price}</p>

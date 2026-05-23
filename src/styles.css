@@ -99,7 +99,11 @@
 
   --font-serif: "Cormorant Garamond", "Times New Roman", serif;
   --font-sans: "Inter", system-ui, sans-serif;
-  --gradient-hero: linear-gradient(180deg, oklch(0.14 0.01 40 / 0.3) 0%, oklch(0.14 0.01 40 / 0.85) 100%);
+  --gradient-hero: linear-gradient(
+    180deg,
+    oklch(0.14 0.01 40 / 0.3) 0%,
+    oklch(0.14 0.01 40 / 0.85) 100%
+  );
   --shadow-gold: 0 10px 40px -10px oklch(0.75 0.14 70 / 0.4);
 }
 
@@ -149,11 +153,13 @@
     font-family: var(--font-sans);
   }
 
-  h1, h2, h3, h4, .font-serif {
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-serif {
     font-family: var(--font-serif);
     font-weight: 500;
     letter-spacing: 0.01em;
   }
 }
-
-
